@@ -11,10 +11,6 @@ import android.widget.TextView;
 
 public class MyScreenComponent extends ConstraintLayout {
 
-    private ImageView infoImage;
-    private Button message;
-    private TextView messageDetail;
-
     public MyScreenComponent(Context context) {
         super(context);
     }
@@ -32,9 +28,9 @@ public class MyScreenComponent extends ConstraintLayout {
     private void init(@Nullable AttributeSet attrs, Context context) {
         inflate(context, R.layout.my_screen_component, this);
 
-        infoImage = findViewById(R.id.infoImage);
-        message = findViewById(R.id.message);
-        messageDetail = findViewById(R.id.messageDetail);
+        ImageView infoImage = findViewById(R.id.infoImage);
+        Button message = findViewById(R.id.message);
+        TextView messageDetail = findViewById(R.id.messageDetail);
 
         TypedArray attributes = context.getTheme().obtainStyledAttributes(
                 attrs, R.styleable.MyScreenComponent, 0, 0
